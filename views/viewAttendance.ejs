@@ -1,0 +1,21 @@
+<%- include("partials/header"); -%>
+<h1>View Attendance</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>MisID</th>
+    <th>Branch</th>
+    <th>Attended</th>
+  </tr>
+<%for(var i = 0 ; i < View.length; i++){%>
+  <tr>
+    <td><%= View[i].Name%></td>
+    <td><%= View[i].MisId%></td>
+    <td><%= View[i].branch%></td>
+    <td><%= View[i].attendance%>/<%= View[i].total%></td>
+  </tr>
+<%}%>
+</table>
+<br>
+<button class="btn btn-primary"><a href="/attendance">Back</a></button>
+<%- include("partials/footer"); -%>

@@ -1,0 +1,38 @@
+<%- include("partials/header"); -%>
+<h1>Student Data</h1>
+<table>
+  <tr>
+    <th>MisId</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Mobile Number</th>
+    <th>Date of Birth</th>
+    <th>Date of Enrollment</th>
+    <th>Branch</th>
+    <th>Attendance</th>
+  </tr>
+<%for(var i = 0 ; i < studentData.length; i++){%>
+  <tr>
+    <td><%= studentData[i].MisId%></td>
+    <td><%= studentData[i].Name%></td>
+    <td><%= studentData[i].email%></td>
+    <td><%= studentData[i].number%></td>
+    <td><%= studentData[i].dob%></td>
+    <td><%= studentData[i].doe%></td>
+    <td><%= studentData[i].branch%></td>
+    <td><%= studentData[i].attendance%>/<%= studentData[i].total%></td>
+  </tr>
+<%}%>
+</table>
+<br>
+<button class="btn btn-primary"><a href="/viewLecture">View Lecture</a></button>
+<button class="btn btn-primary"><a href="/student">Logout</a></button>
+<%- include("partials/footer"); -%>
+<!--  MisId: String,
+  Name: String,
+  email: String,
+  number: Number,
+  dob: String,
+  doe: String,
+  branch: String,
+  password: String, -->

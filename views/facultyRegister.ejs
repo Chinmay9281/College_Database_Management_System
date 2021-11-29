@@ -1,0 +1,25 @@
+<%- include("partials/header"); -%>
+<h1>Faculty Registration</h1>
+<div class="container">
+  <form action="/facultyRegister" method="post">
+    <div class="form-group">
+      <label>Faculty Name</label>
+      <input type="text" class="form-control" name="facultyName" required />
+
+      <label>Mobile Number</label>
+      <input type="tel" class="form-control" name="facultyNumber" required  />
+
+      <label>Email ID</label>
+      <input type="email" class="form-control" name="facultyEmail" required />
+
+      <label>Subject</label>
+      <input type="text" class="form-control" name="facultySubject" required />
+
+      <label for="">Password</label>
+      <input type="password" class="form-control" name="facultyPassword" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Create Account</button>
+    <a href="/faculty" class="btn">Login</a>
+  </form>
+</div>
+<%- include("partials/footer"); -%>

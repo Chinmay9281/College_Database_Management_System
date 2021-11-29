@@ -1,0 +1,16 @@
+<%- include("partials/header"); -%>
+<h1>Faculty Login</h1>
+<div class="container">
+  <form action="/faculty" method="post">
+    <div class="form-group">
+      <label>Email</label>
+      <input type="text" class="form-control" name="facultyEmail" required />
+      <label for="">Password</label>
+      <input type="password" class="form-control" name="facultyPassword" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+    <button type="submit" class="btn btn-primary"><a href="/facultyRegister">Sign up</a></button>
+  </form>
+</div>
+<%- include("partials/footer"); -%>
+

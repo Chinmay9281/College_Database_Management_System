@@ -1,0 +1,26 @@
+<%- include("partials/header"); -%>
+<h1> Mark Attendance</h1>
+
+<form action="/markAttendance" method="post">
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>MisID</th>
+    <th>Branch</th>
+    <th>Mark</th>
+  </tr>
+<%for(var i = 0 ; i < List.length; i++){%>
+  <tr>
+    <td><%= List[i].Name%></td>
+    <td><%= List[i].MisId%></td>
+    <td><%= List[i].branch%></td>
+    <td><input type="checkbox" name="attended" value="<%= List[i].MisId%>" /></td>
+  </tr>
+<%}%>
+</table>
+<br>
+  <button type="submit" class="btn btn-primary">Mark As Present</button>
+  <button class="btn btn-primary"><a href="/attendance">Back</a></button>
+</form>
+
+<%- include("partials/footer"); -%>

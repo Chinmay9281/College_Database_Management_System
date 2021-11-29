@@ -1,0 +1,34 @@
+<%- include("partials/header"); -%>
+<h1>Student Registration</h1>
+<div class="container">
+  <form action="/studentRegister" method="post">
+    <div class="form-group">
+      <label>Student Name</label>
+      <input type="text" class="form-control" name="studentName" required />
+
+      <label>Mobile Number</label>
+      <input type="tel" class="form-control" name="studentNumber" required  />
+
+      <label>Email ID</label>
+      <input type="email" class="form-control" name="studentEmail" required />
+
+      <label>MIS ID</label>
+      <input type="text" class="form-control" name="studentMisId" required />
+
+      <label>Date Of Birth</label>
+      <input type="date" class="form-control" name="studentDob" required />
+
+      <label>Date Of Enrollment</label>
+      <input type="date" class="form-control" name="studentDoe" required />
+
+      <label>Branch</label>
+      <input type="text" class="form-control" name="studentBranch" required />
+
+      <label for="">Password</label>
+      <input type="password" class="form-control" name="studentPassword" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create Account</button>
+    <a href="/student" class="btn">Login</a>
+  </form>
+</div>
+<%- include("partials/footer"); -%>

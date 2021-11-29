@@ -1,0 +1,17 @@
+<%- include("partials/header"); -%>
+<form action="/setLecture" method="post">
+  <div class="form-group">
+    <label>Subject Name</label>
+    <input type="text" class="form-control" name="updateName" required />
+
+    <label>Starting Time</label>
+    <input type="time" name="updateStartTime" class="form-control" required />
+
+    <label>End Time</label>
+    <input type="time" name="updateEndTime" class="form-control" required />
+  </div>
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>
+<br>
+<button class="btn btn-primary"><a href="/viewLecture">Back</a></button>
+<%- include("partials/footer"); -%>

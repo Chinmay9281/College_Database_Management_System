@@ -1,0 +1,32 @@
+<%- include("partials/header"); -%>
+<h1>Faculty Data</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Mobile Number</th>
+    <th>Subject</th>
+  </tr>
+<%for(var i = 0 ; i < facultyData.length; i++){%>
+  <tr>
+    <td><%= facultyData[i].Name%></td>
+    <td><%= facultyData[i].email%></td>
+    <td><%= facultyData[i].number%></td>
+    <td><%= facultyData[i].subject%></td>
+  </tr>
+<%}%>
+</table>
+
+<br>
+<button class="btn btn-primary"><a href="/attendance">Attendance</a></button>
+<button class="btn btn-primary"><a href="/viewLecture">View Lecture</a></button>
+<button class="btn btn-primary"><a href="/setLecture">Set Lecture</a></button>
+<button class="btn btn-primary"><a href="/faculty">Logout</a></button>
+
+<%- include("partials/footer"); -%>
+
+<!-- Name:String,
+    email:String,
+    number:Number,
+    subject:String,
+    password:String -->

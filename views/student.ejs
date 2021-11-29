@@ -1,0 +1,15 @@
+<%- include("partials/header"); -%>
+<h1>Student Login</h1>
+<div class="container">
+  <form action="/student" method="post">
+    <div class="form-group">
+      <label>MIS ID</label>
+      <input type="text" class="form-control" name="studentMisId" required />
+      <label for="">Password</label>
+      <input type="password" class="form-control" name="studentPassword" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+    <button type="submit" class="btn btn-primary"><a href="/studentRegister">Sign up</a></button>
+  </form>
+</div>
+<%- include("partials/footer"); -%>
